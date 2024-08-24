@@ -1,0 +1,11 @@
+.navbar-bg {
+  background: linear-gradient(to right, #ff8b3d, #0abe22);
+  color: rgb(255, 0, 0);
+  transition: background-color 0.3s, color 0.3s;
+  padding: 10px 0;
+  position: fixed; /* Hace que la navbar esté fija */
+  width: 100%; /* Asegura que la navbar ocupe todo el ancho de la página */
+  top: 0; /* Fija la navbar en la parte superior de la página */
+  z-index: 1000; /* Asegura que la navbar esté por encima de otros elementos */
+  box-shadow: 0 4px 2px -4px #0096C4; /* Añade una sombra en la parte inferior */
+}

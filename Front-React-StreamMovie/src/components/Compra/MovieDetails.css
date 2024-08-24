@@ -1,0 +1,43 @@
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.d-flex span {
+  margin-right: 15px;
+}
+
+.btn-primary {
+  background-color: #000;
+  border: none;
+}
+
+.icono{
+  color:gold;
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  border: 0;
+}

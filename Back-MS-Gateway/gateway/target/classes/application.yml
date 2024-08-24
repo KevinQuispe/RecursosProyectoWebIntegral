@@ -1,0 +1,42 @@
+
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+      
+        locator:
+          enabled: true
+      routes:
+        - id: movie-service
+          uri: lb://MOVIE-SERVICE
+          predicates:
+            - Path=/api/peliculas/**
+        - id: buscador-service
+          uri: lb://BUSCADOR-SERVICE
+          predicates:
+            - Path=/api/buscador/**
+        - id: auth-service
+          uri: lb://MOVIE-SERVICE
+          predicates:
+            - Path=/api/auth/**
+        - id: user-service
+          uri: lb://MOVIE-SERVICE
+          predicates:
+            - Path=/api/user/**
+        - id: compra-service
+          uri: lb://MOVIE-SERVICE
+          predicates:
+            - Path=/api/compras/**
+            
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://backend-eureka-production.up.railway.app/eureka/
+  instance:
+    preferIpAddress: true
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
